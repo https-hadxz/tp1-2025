@@ -1,0 +1,11 @@
+<html>
+    <script>
+        alert("Regra de Três\na----b\nc----x\n");
+        a = prompt("Digite o valor de a: ");
+        b = prompt("Agora, digite o valor de b: ");
+        c = prompt("Por fim, digite o valor de c: ");
+        x = (b*c)/a;
+        alert("O resultado desta regra de três foi "+x);
+        </script>
+</html>
+
