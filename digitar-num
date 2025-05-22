@@ -1,0 +1,8 @@
+<script>
+    const x = 10 //number
+    y = "Paia"//string
+    //alert(x)
+y = prompt("Digite um número: ")
+alert("Você digitou " + y)
+
+</script>
