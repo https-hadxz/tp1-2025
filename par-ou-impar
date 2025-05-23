@@ -1,0 +1,11 @@
+<html>
+    <script>
+        n = prompt("Par ou Ímpar?\nDigite um número de 0 a 5: ");
+        if (n%2 == 0) {
+            alert("O número "+n+" é um número par");
+        } else {
+            alert("O número "+n+" é um número ímpar");
+        }
+
+    </script>
+</html>
