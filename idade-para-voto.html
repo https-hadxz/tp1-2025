@@ -1,0 +1,15 @@
+<html>
+    <script>
+        var idade = prompt("Digite sua idade: ");
+        //se (nao (idade > 0 e nao idade < 150))
+        if (idade < 0){
+            alert("Idade inválida.");
+        } else if ((idade < 18) && (idade >= 16) || (idade >= 70)){
+            alert("Seu voto é facultativo.");
+        }else if ((idade > 0) && (idade < 16)){
+            alert("Você não pode votar ainda.");
+        }else{
+            alert("Seu voto é obrigatório.");
+        }
+    </script>
+</html>
