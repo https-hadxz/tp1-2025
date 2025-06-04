@@ -1,0 +1,13 @@
+<html>
+    <script>
+        var palavra = prompt("Digite uma palavra com mais de 5 letras: ");
+        while(palavra.length < 5){
+            palavra = prompt("A palavra "+palavra+" é muito pequena.\nDigite novamente: ");
+        }
+        var saida = "Boa escolha!"
+        for(var i=0; i < palavra.length; i++){
+            saida += '\n' + palavra[i]
+        }
+        alert(saida);
+    </script>
+</html>
