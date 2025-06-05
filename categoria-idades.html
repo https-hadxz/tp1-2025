@@ -1,0 +1,16 @@
+<html>
+    <script>
+        //Faça um programa que leia a idade de uma pessoa e informe em qual categoria ela se encaixa: 
+        //infantil (até 12 anos), juvenil (de 13 a 17 anos) ou adulto (a partir de 18 anos).
+        var idade = prompt("Digite a sua idade: ");
+        if (idade <= 12){
+            alert("Sua categoria é infantil.");
+        } else if((idade >= 13) || (idade <= 17)){
+            alert("Sua categoria é juvenil.");
+        } else if (idade > 18){
+            alert("Sua categoria é adulto.");
+        } else if((idade < 0) || (idade > 120)){
+            alert("Idade inválida.");
+        }
+    </script>
+</html>
