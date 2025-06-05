@@ -1,0 +1,13 @@
+<html>
+    <script>
+        //alert(Date.parse('10'));
+        var nascimento = prompt("Digite sua data de nascimento(dd-mm-aaaa): ");
+        while(Number.isNaN(nascimento)){
+            nascimento = prompt("Digite sua data de nascimento(dd-mm-aaaa): ");
+            nascimento = Date.parse(nascimento)
+        }
+        var anos = Date.now - nascimento.getMouth
+        anos = Date.parse(nascimento)
+            alert("Você tem "+anos+" anos");
+    </script>
+</html>
