@@ -1,0 +1,24 @@
+<html>
+    <script>
+        let array = [];
+        for (var i = 0; i<3; i++) {
+            var description = prompt("Digite o "+(i+1)+" º número: ");
+            array.push(parseInt(description));
+            
+        }
+        function comparar(a, b) {
+    if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  // a deve ser igual a b
+  return 0;}
+        array.sort(comparar);
+        alert("Valores: "+array.join(", "));
+        //alert("Valores: "+array[0]+", "+array[1]+", "+array[2]);
+
+    </script>
+
+</html>
