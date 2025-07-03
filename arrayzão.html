@@ -1,0 +1,17 @@
+<html>
+    <script>
+        var palavras = []
+        var indice = 0, max
+        max = prompt("Quantas palavras você quer armazenar?: ");
+        while(indice < max){
+            palavras[indice] = prompt("Digite uma palavra: ");
+            indice++
+        }
+        alert();
+        var saida = "Você digitou as palavras: \n"
+        for (var i=0; i < max; i++){
+            saida = saida+palavras[i]+"\n"
+        }
+        alert(saida)
+    </script>
+</html>
