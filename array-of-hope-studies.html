@@ -1,0 +1,17 @@
+<html>
+    <script>
+        const tam = 3;
+        var numeros = []
+        alert("Digite "+tam+"numeros...\n");
+        for (var i=0; i < tam; i++){
+            numeros[i] = prompt("Digite o "+(1+1)+"° número: ");
+        }
+        alert("Você tem esses números no vetor: ");
+        for(var i=0; i<tam; i++){
+            alert(numeros[i]);
+            if(i < tam -1){
+                alert(", ");
+            }
+        }
+    </script>
+</html>
