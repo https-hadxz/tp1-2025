@@ -1,0 +1,75 @@
+<html>
+    <script>
+    /*Crie um código para calcular os rendimentos de uma aplicação financeira com base em valores informados pelo usuário.
+
+Leia os valores do saldo, taxa de rendimento e quantidade de meses:
+
+No código, você precisa solicitar ao usuário que informe o saldo na conta bancária, 
+a taxa de rendimento do investimento e a quantidade de meses da aplicação. 
+Esses valores serão utilizados para calcular os rendimentos.
+Garanta que os valores informados são válidos:
+
+Verifique se os valores informados pelo usuário são números maiores do que zero. Caso contrário, solicite que ele digite um valor válido.
+Realize o cálculo do rendimento:
+
+Com os valores válidos, calcule o rendimento da aplicação financeira. Utilize a fórmula adequada para determinar o valor do rendimento em cada mês:
+saldo x (taxaRendimento/100)
+Exiba o valor do rendimento mês a mês:
+
+Após o cálculo, exiba o valor do rendimento de cada mês. Você deve usar um laço de 
+repetição para percorrer os meses e exibir o rendimento correspondente a cada mês.
+Ao calcular o rendimento de cada mês, também atualize o total aplicado:
+saldo + rendimentoMensal
+Este valor atualizado será o saldo a ser utilizado para o cálculo do rendimento no mês seguinte.
+Exiba o saldo final da aplicação:
+
+Ao final do código, mostre o saldo final da aplicação, que será o resultado final após o cálculo do rendimento durante todos os meses.
+ 
+
+A saída do código deve seguir os exemplos a seguir, mostrando mês a mês o valor do rendimento e o total aplicado:
+
+Exemplo da saída do código (usando como valores de entrada: saldo = 10; taxa = 10; meses = 2):
+
+No 1º mês a aplicação rendeu R$ 1,00 e o total aplicado passou a ser R$ 11,00
+No 2º mês a aplicação rendeu R$ 1,10 e o total aplicado passou a ser R$ 12,10
+O saldo final da aplicação será de R$ 12,10
+
+Outro exemplo da saída do código (usando como valores de entrada: saldo = 100; taxa = 2; meses = 4):
+
+No 1º mês a aplicação rendeu R$ 2,00 e o total aplicado passou a ser R$ 102,00
+No 2º mês a aplicação rendeu R$ 2,04 e o total aplicado passou a ser R$ 104,04
+No 3º mês a aplicação rendeu R$ 2,08 e o total aplicado passou a ser R$ 106,12
+No 4º mês a aplicação rendeu R$ 2,12 e o total aplicado passou a ser R$ 108,24
+O saldo final da aplicação será de R$ 108,24*/
+
+//M = C.i.t
+// C x (i/100)
+var saldo = prompt("Calculadora de rendimento financeiro fictício\nInforme seu saldo na conta bancária: ");
+if(saldo <= 0){
+var saldo = prompt("Valor inválido. Informe um saldo na conta bancária: ");
+}
+var taxa = prompt("Informe agora a taxa de rendimento: ");
+if(taxa <= 0 ){
+var taxa = prompt("Valor inválido. Informe uma taxa de rendimento válida: ");
+}
+var tempo = prompt("Informe a quantidade de meses que ficará rendendo: ");
+if(tempo <= 0){
+    var tempo = prompt("Valor inválido. Informe um tempo em meses válido: ");
+}
+ 
+for(i=0; i<tempo;i++){
+    var rendimentoMensal = saldo*(taxa/100)
+    rendimentoMensal = parseFloat(rendimentoMensal);
+    var saldoFinal = saldo+rendimentoMensal
+    //var totalAplicado = saldoFinal+rendimentoMensal
+    saldoFinal = parseFloat(saldoFinal);
+    alert("No "+(i+1)+" ° mês a aplicação rendeu R$"+rendimentoMensal+" e o total aplicado passou a ser R$"+saldoFinal);
+    
+
+}
+
+
+
+
+    </script>
+</html>
