@@ -44,26 +44,27 @@ O saldo final da aplicação será de R$ 108,24*/
 
 //M = C.i.t
 // C x (i/100)
-var saldo = prompt("Calculadora de rendimento financeiro fictício\nInforme seu saldo na conta bancária: ");
+var saldo = parseFloat(prompt("Calculadora de rendimento financeiro fictício\nInforme seu saldo na conta bancária: "));
 if(saldo <= 0){
-var saldo = prompt("Valor inválido. Informe um saldo na conta bancária: ");
+var saldo = paseFloat(prompt("Valor inválido. Informe um saldo na conta bancária: "));
 }
-var taxa = prompt("Informe agora a taxa de rendimento: ");
+var taxa = parseFloat(prompt("Informe agora a taxa de rendimento: "));
 if(taxa <= 0 ){
-var taxa = prompt("Valor inválido. Informe uma taxa de rendimento válida: ");
+var taxa = parseFloat(prompt("Valor inválido. Informe uma taxa de rendimento válida: "));
 }
-var tempo = prompt("Informe a quantidade de meses que ficará rendendo: ");
+var tempo = parseFloat(prompt("Informe a quantidade de meses que ficará rendendo: "));
 if(tempo <= 0){
-    var tempo = prompt("Valor inválido. Informe um tempo em meses válido: ");
+    var tempo = parseFloat(prompt("Valor inválido. Informe um tempo em meses válido: "));
 }
  
-for(i=0; i<tempo;i++){
+for(var meses = 0; meses < tempo; meses++){
     var rendimentoMensal = saldo*(taxa/100)
     rendimentoMensal = parseFloat(rendimentoMensal);
     var saldoFinal = saldo+rendimentoMensal
+    saldo = saldoFinal
     //var totalAplicado = saldoFinal+rendimentoMensal
     saldoFinal = parseFloat(saldoFinal);
-    alert("No "+(i+1)+" ° mês a aplicação rendeu R$"+rendimentoMensal+" e o total aplicado passou a ser R$"+saldoFinal);
+    alert("No "+(meses+1)+" ° mês a aplicação rendeu R$"+rendimentoMensal.toFixed(2)+" e o total aplicado passou a ser R$"+saldoFinal.toFixed(2));
     
 
 }
