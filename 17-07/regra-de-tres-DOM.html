@@ -1,0 +1,20 @@
+<h1>
+    Calculadora de Regra de 3
+</h1>
+<input type="number" id="a">
+-----
+<input type="number" id="b">
+<br>
+<input type="number" id="c">
+-----       x
+<br>
+<input type="button" value="Calcular x" onclick="multiplicarX()">
+<h3 id="num" >
+
+</h3>
+<script>
+    function multiplicarX(){
+        let x = (a.value*b.value)/(c.value)
+        num.innerHTML = `x = ${x}`
+    }
+</script>
