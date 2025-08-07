@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<h1>
+<p>Calculadora Aritmética</p>
+</h1>
+<input type="number1" id="a">
+<input type="number2" id="b">
+<input type="button" value= "+" onclick="adicao()">
+<input type="button" value= "-" onclick="subtracao()">
+<input type="button" value= "x" onclick="multiplicacao()">
+<input type="button" value= "/" onclick="divisao()">
+<input type="button" value= "Limpar" onclick="limpar()">
+<!-- <input type="button" value="Exibir Objeto" onclick="novoObj"> -->
+<h3 id="num">
+    Aguardando valores...
+    
+    </h3>
+<ol id="lista"></ol>
+ 
+
+ 
+<script>
+let vetor = []
+function novoObj (operacao, resultado){
+let objeto = {};
+objeto.operando1 = a.value;
+objeto.operando2 = b.value;
+objeto.operacao = operacao;
+objeto.resultado = resultado;
+vetor.push(objeto);
+
+let listaObj = document.createElement("li");
+listaObj.innerHTML = `Resultado: ${objeto.operando1} ${objeto.operacao} ${objeto.operando2} = ${objeto.resultado}`
+lista.appendChild(listaObj);
+ 
+}
+function adicao(){
+let x = parseFloat(a.value)+parseFloat(b.value)
+num.innerHTML = `x = ${x}`
+novoObj("+", x);
+}
+function subtracao(){
+let x = parseFloat(a.value)-parseFloat(b.value)
+num.innerHTML = `x = ${x}`
+novoObj("-", x);
+}
+function multiplicacao(){
+let x = parseFloat(a.value)*parseFloat(b.value)
+num.innerHTML = `x = ${x}`
+novoObj("x", x);
+}
+function divisao(){
+let x = parseFloat(a.value)/parseFloat(b.value)
+num.innerHTML = `x = ${x}`
+novoObj("/", x);
+}
+function limpar(){
+a.value = ''
+b.value = ''
+letx = 'Aguardando valores...'
+num.innerHTML = `${x}`
+
+}
+
+</script>
+</body>
+</html>
