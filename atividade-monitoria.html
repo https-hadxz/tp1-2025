@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresente-se</title>
+</head>
+<h1>Apresente-se!</h1>
+<h3>Coloque seu nome, sua idade e sua profissão nas lacunas abaixo, respectivamente. 
+</h3>
+<body>
+    <input type="nome" id="nome">
+    <input type="idade" id="idade">
+    <input type="profissão" id="profissao">
+    <input type="button" id="exibir" value="Exibir" onclick="obj()">
+    <input type="button" id="limpar" value="Limpar" onclick="limpar()">
+    <h3 id="individuo">
+        Aguardando entrada de valores...
+    </h3>
+    <ol id="lista"></ol>
+    <script>
+        // let vetor = [];
+        function obj(){
+            var pessoa = {}
+            pessoa.nome = nome.value;
+            pessoa.idade = idade.value;
+            pessoa.profissao = profissao.value;
+            // vetor.push(pessoa);
+
+            var listaObj = document.createElement("li");
+            listaObj.innerHTML = `Nome: ${pessoa.nome}, Idade: ${pessoa.idade}, Profissão: ${pessoa.profissao}`
+            lista.appendChild(listaObj);
+            var display = document.getElementById("individuo");
+            display.style.display = "none"
+        }
+        function limpar(){
+        nome.value = ''
+        idade.value = ''
+        profissao.value = ''
+        var limpandoLista = document.getElementById("lista")
+        limpandoLista.innerHTML = ''
+         var display = document.getElementById("individuo");
+        display.style.display = "block"
+        
+        // var limpando = 'Aguardando valores...'
+        // individuo.innerHTML = `${pessoa}`
+
+}
+
+    </script>
+</body>
+</html>
