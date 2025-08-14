@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <p>Calculadora Aritmética</p>
+    </h1>
+    <input type="number1" id="a">
+    <input type="number2" id="b">
+    <input type="button" value= "+" onclick="adicao()" id="adição">
+    <input type="button" value= "-" onclick="subtracao()">
+    <input type="button" value= "x" onclick="multiplicacao()">
+    <input type="button" value= "/" onclick="divisao()">
+    <input type="button" value= "Limpar" onclick="limpar()">
+    <input type="button" value="Exibir Objeto" onclick="novoObj">
+    <ol id="lista"></ol>
+  
+    <h3 id="num">
+        Aguardando valores...
+
+    </h3>
+   
+    <script>
+        let vetor = []
+        function novoObj (operacao, resultado){
+        let objeto = {};
+        objeto.operando1 = a.value;
+        objeto.operando2 = b.value;
+        objeto.operacao = operacao
+        objeto.resultado = resultado
+        vetor.push(objeto);
+
+        let p = document.createElement("p");
+        let listaObj = document.createElement("li");
+        listaObj.innerHTML = `Operando 1: ${objeto.operando1}`
+        listaObj.innerHTML = `Operando 2: ${objeto.operando2}`
+        listaObj.innerHTML = `Operação: ${objeto.operacao}`
+        listaObj.innerHTML = `Resultado: ${objeto.resultado}`
+        
+        } 
+        function adicao(){
+            let x = parseFloat(a.value)+parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+            novoObj("+", x);
+        }
+        function subtracao(){
+            let x = parseFloat(a.value)-parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+        }
+        function multiplicacao(){
+            let x = parseFloat(a.value)*parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+        }
+        function divisao(){
+            let x = parseFloat(a.value)/parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+        }
+        function limpar(){
+            a.value = ''
+            b.value = ''
+            let x = 'Aguardando valores...'
+            num.innerHTML = `${x}`
+
+        }
+
+    </script>
+    
+</body>
+</html>
