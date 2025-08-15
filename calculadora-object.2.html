@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <p>Calculadora Aritmética</p>
+    </h1>
+    <input type="number1" id="a">
+    <input type="number2" id="b">
+    <input type="button" value= "+" onclick="adicao()" id="adição">
+    <input type="button" value= "-" onclick="subtracao()">
+    <input type="button" value= "x" onclick="multiplicacao()">
+    <input type="button" value= "/" onclick="divisao()">
+    <input type="button" value= "Limpar" onclick="limpar()">
+    <input type="button" value="Exibir Objeto" onclick="novoObj">
+    <ol id="lista"></ol>
+  
+    <h3 id="num">
+        Aguardando valores...
+
+    </h3>
+   <script>
+    const DB_NAME = 'MyDatabase';
+    const DB_VERSION = 2;
+    const STORE_NAME = 'MyObjectStore';
+
+    let db;
+
+// Open or create the database
+const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+request.onerror = function(event) {
+    console.error("IndexedDB error:", event.target.errorCode);
+};
+
+request.onsuccess = function(event) {
+    db = event.target.result;
+    console.log("Database opened successfully");
+    mostrarRegistros();
+};
+
+request.onupgradeneeded = function(event) {
+    db = event.target.result;
+    if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME, { keyPath: 'key' });
+        console.log("Object store created");
+    }
+};
+
+// Add data to the object store
+function adicionar(key, value){
+    event.preventDefault();
+    const transaction = db.transaction([STORE_NAME], 'readwrite');
+    const objectStore = transaction.objectStore(STORE_NAME);
+    const addRequest = objectStore.add({ key: key, value: value });
+
+    addRequest.onsuccess = function() {
+        console.log("Data added successfully");
+        mostrarRegistros();
+    };
+
+    addRequest.onerror = function() {
+        console.error("Error adding data");
+    };
+};
+
+function mostrarRegistros() {
+    const transaction = db.transaction([STORE_NAME], 'readonly');
+    const objectStore = transaction.objectStore(STORE_NAME);
+    const outputDiv = document.createElement("div");
+    outputDiv.innerHTML = ''; // Clear previous output
+
+    document.body.appendChild(outputDiv);
+
+    objectStore.openCursor().onsuccess = function(event) {
+        const cursor = event.target.result;
+        if (cursor) {
+            const p = document.createElement("p");
+            pText = `<p>Chave: ${cursor.value.key}, Valor: ${cursor.value.value}</p>`;
+            outputDiv.appendChild(p);
+            cursor.continue();
+        } else {
+            console.log("All data retrieved");
+        }
+    };
+
+}
+
+   </script>
+    <script>
+        let vetor = []
+        function novoObj (operacao, resultado){
+        let objeto = {};
+        objeto.operando1 = a.value;
+        objeto.operando2 = b.value;
+        objeto.operacao = operacao
+        objeto.resultado = resultado
+        vetor.push(objeto);
+
+        let p = document.createElement("p");
+        let listaObj = document.createElement("li");
+        listaObj.innerHTML = `Operando 1: ${objeto.operando1}`
+        listaObj.innerHTML = `Operando 2: ${objeto.operando2}`
+        listaObj.innerHTML = `Operação: ${objeto.operacao}`
+        listaObj.innerHTML = `Resultado: ${objeto.resultado}`
+        
+        } 
+        function adicao(){
+            let x = parseFloat(a.value)+parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+            novoObj("+", x);
+            adicionar(`${a.value} + ${b.value}`, a.value+b.value);
+            mostrarRegistros();
+        }
+        function subtracao(){
+            let x = parseFloat(a.value)-parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+        }
+        function multiplicacao(){
+            let x = parseFloat(a.value)*parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+        }
+        function divisao(){
+            let x = parseFloat(a.value)/parseFloat(b.value)
+            num.innerHTML = `x = ${x}`
+        }
+        function limpar(){
+            a.value = ''
+            b.value = ''
+            let x = 'Aguardando valores...'
+            num.innerHTML = `${x}`
+
+        }
+
+    </script>
+    
+</body>
+</html>
