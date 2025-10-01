@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        .bloco{
+            display: block;
+        }
+        input[type=submit] {
+            margin-top: 20px;
+        }
+        input:hover{
+            background-color: rgb(255, 56, 255);
+        }
+        div{
+            width: 200px;
+            background-color: rgb(180, 244, 255);
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1>Formulário </h1>
+    <form action="#" method="get">
+     
+            <label class="bloco" for="nome">Nome: </label><br>
+            <input type="text" name="nome" id="nome" placeholder="Seu nome" title="Digite o seu nome aqui" maxlength="50" minlength="2" required>
+            <label class="bloco" for="sobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="Seu sobrenome" title="Digite o seu sobrenome aqui">
+            <label class="bloco" for="idade">Idade</label>
+            <input type="number" name="idade" id="idade" min="18" max="65">
+            <input type="submit" value="Enviar">
+
+    </form>
+    </div>
+</body>
+</html>
