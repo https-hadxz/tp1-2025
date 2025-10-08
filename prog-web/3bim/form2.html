@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:hover{
+            background-color: aquamarine;
+        }
+        input{
+            display: block;
+
+        }
+        input[type="checkbox"], input[type="radio"]{
+            display: inline;
+        }
+        fieldset{
+            width: 50%;
+
+        }
+        form{
+            width: 54%;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Restrições do Input</h1>
+    <form action="#"></form>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+
+    
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" id="nome" size="50" maxlength="10" placeholder="seu nome" required title="Entre com o nome" autofocus>
+    <!--size: tamanho da caixinha; maxlenght: tamanho máximo de caracteres 
+    readonly = só pra ler
+    placeholder: texto desvanecido para o que significa o input
+    required: obriga
+    step: pula número
+    title: aparece quadrado com o que tem que fazer
+    autofocus: força o cursor em um foco automático
+    radio: 
+    -->
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email">
+    <label for="idade">Idade: </label>
+    <input type="number" name="idade" id="idade" max="45" min="30">
+
+    <fieldset> 
+        <legend>Veículo</legend>
+
+    <input type="checkbox" name="veiculo1" id="veiculo1" value="bike">
+    <label for="veiculo"> Eu tenho uma bike </label>
+    
+    <input type="checkbox" name="veiculo2" id="veiculo2" value="boat">
+    <label for="veiculo2"> Eu tenho um barco</label>
+
+    <input type="checkbox" name="veiculo3" id="veiculo3" value="car">
+    <label for="veiculo2"> Eu tenho um carro</label>
+</fieldset>
+
+<fieldset>
+    <legend>Linguagem Predileta</legend>
+
+    <input type="radio" name="fav_language" id="html" value="HTML">
+    <label for="html"> HTML</label>
+    <input type="radio" name="fav_language" id="css" value="CSS">
+    <label for="CSS"> CSS</label>
+    <input type="radio" name="fav_language" id="javascript" value="JavaScript">
+    <label for="javascript"> JavaScript</label>
+
+
+</fieldset>
+
+<label for="cars">Escolha um carro:</label>
+<select id="cars" name="cars" multiple>
+    <option value="volvo" selected>Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+
+</select>
+
+    <input type="submit" value="Enviar">
+
+</body>
+</html>

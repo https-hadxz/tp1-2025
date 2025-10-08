@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv 08-10</title>
+</head>
+<body>
+    <!--
+Crie um formulário 
+
+separe os conjuntos de informação com fieldset
+
+campos: nome, email, senha, idade com seus respectivos inputs (text, email, password, number)
+campo: fieldSet (o que tenho para estudar): utilize checkbox: mesa em casa, celular, notebook, pc, tablete, kindle
+campo: Linguagem predileta: HTML, CSS, JAVASCRIPT, PYTHON, JAVA, C++
+campo (select): Como venho para o iff: A PÉ, BICICLETA, ÔNIBUS, CARRO, MOTO, CARREGADO
+
+coloque autofoco no nome, coloque valor inicial de 18 para a idade, coloque uma mensagem no fundo do nome, do email 
+e da senha pedindo preenchimento, coloque tamanho maximo de 30 caracteres para o campo nome
+
+    -->
+
+    <h1>Atividade 08/10</h1>
+    <form action="#"></form>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+
+    
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" size="50" maxlength="30" placeholder="Seu nome" required title="Entre com o nome" autofocus>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="Seu email" required title="Entre com o seu email">
+
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha" placeholder="Sua senha" required title="Entre com a sua senha">
+
+            <label for="idade">Idade: </label>
+            <input type="number" name="idade" id="idade" max="45" min="18">
+    </fieldset>
+
+    <fieldset>
+        <legend>O que tenho para estudar</legend>
+        <input type="checkbox" name="objeto1" id="objeto1" value="table">
+        <label for="objeto1"> Mesa em casa </label>
+        
+        <input type="checkbox" name="objeto2" id="objeto2" value="cellphone">
+        <label for="objeto2"> Celular </label>
+    
+        <input type="checkbox" name="objeto3" id="objeto3" value="notebook">
+        <label for="objeto3"> Notebook</label>
+
+        <input type="checkbox" name="objeto4" id="objeto4" value="computer">
+        <label for="objeto3"> Pc</label>
+
+        <input type="checkbox" name="objeto5" id="objeto5" value="tablet">
+        <label for="objeto3"> Tablet</label>
+
+        <input type="checkbox" name="objeto6" id="objeto6" value="kindle">
+        <label for="objeto3"> Kindle</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Linguagem Predileta</legend>
+    
+        <input type="radio" name="fav_language" id="html" value="HTML">
+        <label for="html"> HTML</label>
+        <input type="radio" name="fav_language" id="css" value="CSS">
+        <label for="CSS"> CSS</label>
+        <input type="radio" name="fav_language" id="javascript" value="JavaScript">
+        <label for="javascript"> JavaScript</label>
+        <input type="radio" name="fav_language" id="python" value="Python">
+        <label for="javascript"> Python</label>
+        <input type="radio" name="fav_language" id="java" value="Java">
+        <label for="javascript"> Java</label>
+        <input type="radio" name="fav_language" id="c++" value="C++">
+        <label for="javascript"> C++</label>
+    
+    </fieldset>
+
+
+<label for="transport">Como venho para o iff:</label>
+<select id="transport" name="transport">
+    <option value="a pé" selected>A PÉ</option>
+    <option value="bike">BICICLETA</option>
+    <option value="bus">ÔNIBUS</option>
+    <option value="car">CARRO</option>
+    <option value="moto">MOTO</option>
+    <option value="carregado">CARREGADO</option>
+
+</select>
+
+</body>
+</html>
