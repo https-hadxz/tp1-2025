@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <div hx-get="https://ola-tp1.onrender.com/" hx-trigger="load" hx-swap="innerHTML">
+        Carregando dados de uma API externa...
+    </div>
+
+    <form hx-post="https://ola-tp1.onrender.com/" hx-trigger="submit" hx-swap="afterend" ></form>
+    <label for="name">Digite seu nome: </label>
+        <input type="text" name="nome" id="nome">
+        <input type="submit" value="Enviar nome">
+       
+    
+
+         
+    </body>
+</html>
