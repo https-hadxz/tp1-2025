@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+    <% console.log('Exibindo página livro-de-visitas.ejs') %>
+<head>
+    <title>Livro de Visitas</title>
+</head>
+<body>
+    <h1>Bem vindo ao nosso livro de visitas!</h1>
+    <h2>Deixe uma mensagem para nossos telespectadores de agora ou para o tempo futuro</h2>
+    <h3> Inclua seu nome de uduário ou o nome que preferir.</h3>
+    <br>
+
+</body>
+<form action="/livro-de-visitas" method="post">
+    <label for="usuario">Usuário: </label>
+    <input type="text" name="user">
+
+    <label for="mensagem">Mensagem: </label>
+    <input type="text" name="msg">
+
+    <input type="submit" value="Enviar">
+
+</form>
+</html>
