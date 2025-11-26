@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+table, th, td{
+    border: 1px solid black;
+
+}
+th, td{
+    border-radius: 10px;
+}
+tr:nth-child(even){
+    height: 100px;
+    background-color: aqua;
+
+}
+/*p:nth-child(1){
+    background-color: aliceblue;
+}*/
+    </style>
+</head>
+<body>
+    <h2>A basic HTML table</h2>
+
+        <table style="width: 70%;">
+            <caption>Legendando a tabela</caption>
+            <tr>
+                <th colspan="2">Company</th>
+                
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfred</td>
+                <td>Maria</td>
+                <td>Rússia</td>
+            </tr>
+            <tr>
+                <td>Hanna</td>
+                <td>Alex</td>
+                <td> KJVKG</td>
+            </tr>
+        </table>
+        <br>
+        <table style="width: 100%;">
+            <colgroup>
+            <col span="1" style="background-color: azure;">    
+            <col span="5" style="background-color: antiquewhite;">
+            <col span="1" style="background-color: azure;">
+            </colgroup>
+            <tr>
+                <th>DOM</th>
+                <th>SEG</th>
+                <th>TER</th>
+                <th>QUA</th>
+                <th>QUI</th>
+                <th>SEX</th>
+                <th>SÁB</th>
+            </tr>
+        </table>
+
+</body>
+</html>
