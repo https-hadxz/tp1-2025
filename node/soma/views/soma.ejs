@@ -6,6 +6,16 @@
   <meta charset="utf-8">
   <title>Calculadora</title>
 </head>
+<!--O que fica após o ? no link é chamado de query; cada vez que fazemos cadastro de usuário, é necessário usar método post
+ Get -- informações ficam no query
+ Post - informações ficam no body
+ <% == tag que é um pedaço do javascrip/script que vai ser executado (se chama scriptlet)
+roda somente o que está escrito no servidor
+pode ter for, if else, exibição de variáveis
+EJS consegue tratar tanto código javascript quanto html e renderiza tudo para html e exibe na página
+na requisição de renderizar, você vai passar os parâmetros com mesmo nome:>
+app.get("/", (req, res))
+-->
 
 <body>
   <form action="/operacao" method="post">

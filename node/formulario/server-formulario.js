@@ -9,9 +9,9 @@ app.get('/', (request, response) => {
 response.render('formulario')
 })
 
-app.post('/sei-la', (req, response) => {
-    let msg = req.body.nomezinho + " " + req.body.sobrenome
-    response.send(msg)
+app.post('/saudacao', (req, response) => {
+    var msg = "Olá, " + req.body.nomezinho + " " + req.body.sobrenome + " da cidade de " + req.body.cidade
+    response.render('saudacao', {msg})
 
     })
     console.log("Rodando server...")
