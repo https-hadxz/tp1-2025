@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/advinhacao" method="post">
+        <h1>Advinhe o número que estou pensando para você...</h1>
+        <label> Valor </label>
+        <input id="n1" name="n1" /><br>
+        <button type="submit">Enviar</button>
+      </form>
+      
+      <% if(n1 == ''){%> 
+        <h4>aguardando valores...</h4>
+      <%}else if(numeroSorteado == n1){%>
+        <h3>Dados atualizados. Você acertou!</h3>
+    <%} else if (numeroSorteado < n1){%>
+        <h3>Dados atualizados. Seu número está muito alto!</h3>
+        
+    <%} else if (numeroSorteado > n1){%>
+        <h3>Dados atualizados. Seu número está muito baixo!</h3>
+    
+    <%} %>
+
+</body>
+</html>
