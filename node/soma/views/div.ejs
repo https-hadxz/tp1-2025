@@ -18,8 +18,8 @@ app.get("/", (req, res))
 -->
 
 <body>
-  <% console.log('Exibindo página soma.ejs') %>
-  <form action="/soma" method="post">
+    <% console.log('Exibindo página soma.ejs') %>
+  <form action="/div" method="post">
     <label> Nome </label>
     <input id="nome" name="nome" />
     <br>
@@ -31,13 +31,13 @@ app.get("/", (req, res))
     <input id="op" name="op" />
     <button type="submit">Enviar</button>
     <a href="/mult">Multiplicação</a>
+    <a href="/soma">Soma</a>
     <a href="/sub">Subtração</a>
-    <a href="/div">Divisão</a>
   </form>
-  <% if( typeof(x) !="undefined" ){ %>
+  <%if( typeof(x) !="undefined" ){%>
   <h1>Resultado:</h1>
   <h3 id="resultado" name="resultado">
-    <%= x %>
+    <%=x%>
   </h3>
   <% } else { %>
   <h4>aguardando valores...</h4>
